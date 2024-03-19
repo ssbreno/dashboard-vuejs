@@ -1,0 +1,25 @@
+{
+  "name": "@dashboard/front-end",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "author": "Breno Sobral",
+  "license": "ISC",
+  "engines": {
+    "node": "^18.17.0 || >=20.5.0",
+    "npm": "^10.3.0"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.11.1",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  }
+}
