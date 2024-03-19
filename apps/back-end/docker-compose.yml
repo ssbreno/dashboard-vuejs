@@ -10,27 +10,27 @@ services:
       - ./:/app
     command: sh -c "pnpm run start"
     depends_on:
-      - database-db
+      - dashboard-db
     networks:
-      - database-network
+      - dashboard-network
 
-  database-db:
+  dashboard-db:
     image: 'bitnami/postgresql'
-    container_name: database-db
+    container_name: dashboard-db
     environment:
       - POSTGRESQL_USERNAME=docker
       - POSTGRESQL_PASSWORD=docker
-      - POSTGRESQL_DATABASE=database
+      - POSTGRESQL_DATABASE=dashboard
     ports:
       - 5432:5432
     volumes:
       - 'postgresql_data:/bitnami/postgresql'
     networks:
-      - database-network
+      - dashboard-network
 
 volumes:
   postgresql_data:
     driver: local
 
 networks:
-  database-network:
+  dashboard-network:
